@@ -1,0 +1,30 @@
+[project]
+name = "gemma-3-4b-it-fastapi"
+version = "0.1.0"
+description = "Gemma-3-4b-it FastAPI deployment example using uv for dependency management"
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [
+    {name = "Self-LLM Team", email = "example@example.com"}
+]
+keywords = ["gemma", "fastapi", "llm", "ai", "machine-learning"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "accelerate",
+    "fastapi",
+    "huggingface-hub",
+    "modelscope",
+    "pillow>=11.3.0",
+    "requests",
+    "transformers",
+    "uvicorn",
+]
+
+[tool.uv.sources]
+transformers = { git = "https://github.com/huggingface/transformers", rev = "v4.49.0-Gemma-3" }
