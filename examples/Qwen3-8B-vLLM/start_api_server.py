@@ -53,7 +53,7 @@ def start_vllm_server(
     served_model_name: str = "Qwen3-8B",
     max_model_len: int = 8192,
     enable_reasoning: bool = True,
-    reasoning_parser: str = "deepseek_r1",
+    reasoning_parser: str = "qwen3",
     gpu_memory_utilization: float = 0.9,
     tensor_parallel_size: int = 1
 ):
@@ -89,7 +89,7 @@ def start_vllm_server(
     
     # 添加推理模式参数
     if enable_reasoning:
-        cmd.extend(["--enable-reasoning", "--reasoning-parser", reasoning_parser])
+        cmd.extend(["--reasoning-parser", reasoning_parser])
     
     print("🚀 启动 vLLM API 服务器")
     print("=" * 50)
@@ -163,8 +163,8 @@ def main():
     parser.add_argument(
         "--reasoning-parser",
         type=str,
-        default="deepseek_r1",
-        help="推理解析器 (默认: deepseek_r1)"
+        default="qwen3",
+        help="推理解析器 (默认: qwen3)"
     )
     parser.add_argument(
         "--gpu-memory-utilization",

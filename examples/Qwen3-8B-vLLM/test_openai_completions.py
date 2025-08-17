@@ -11,7 +11,7 @@ from typing import Dict, Any
 
 
 def test_with_curl(
-    base_url: str = "http://localhost:8000",
+    base_url: str = "http://192.168.1.2:8000",
     model: str = "Qwen3-8B"
 ) -> None:
     """
@@ -76,7 +76,7 @@ def test_with_curl(
 
 
 def test_with_openai_client(
-    base_url: str = "http://localhost:8000/v1",
+    base_url: str = "http://192.168.1.2:8000/v1",
     api_key: str = "sk-xxx",
     model: str = "Qwen3-8B"
 ) -> None:
@@ -133,7 +133,7 @@ def test_with_openai_client(
             print(f"❌ 请求失败: {e}")
 
 
-def test_models_endpoint(base_url: str = "http://localhost:8000") -> None:
+def test_models_endpoint(base_url: str = "http://192.168.1.2:8000") -> None:
     """
     测试模型列表接口
     
@@ -166,7 +166,7 @@ def test_models_endpoint(base_url: str = "http://localhost:8000") -> None:
         print(f"❌ JSON 解析失败: {e}")
 
 
-def check_server_health(base_url: str = "http://localhost:8000") -> bool:
+def check_server_health(base_url: str = "http://192.168.1.2:8000") -> bool:
     """
     检查服务器健康状态
     
@@ -202,7 +202,7 @@ def main():
     print("🧪 OpenAI Completions API 测试")
     print("=" * 50)
     
-    base_url = "http://localhost:8000"
+    base_url = "http://192.168.1.2:8000"
     model = "Qwen3-8B"
     
     # 检查服务器健康状态

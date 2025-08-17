@@ -11,7 +11,7 @@ from typing import List, Dict, Any
 
 
 def test_with_curl(
-    base_url: str = "http://localhost:8000",
+    base_url: str = "http://192.168.1.2:8000",
     model: str = "Qwen3-8B"
 ) -> None:
     """
@@ -98,7 +98,7 @@ def test_with_curl(
 
 
 def test_with_openai_client(
-    base_url: str = "http://localhost:8000/v1",
+    base_url: str = "http://192.168.1.2:8000/v1",
     api_key: str = "sk-xxx",
     model: str = "Qwen3-8B"
 ) -> None:
@@ -173,7 +173,7 @@ def test_with_openai_client(
 
 
 def test_streaming_chat(
-    base_url: str = "http://localhost:8000/v1",
+    base_url: str = "http://192.168.1.2:8000/v1",
     api_key: str = "sk-xxx",
     model: str = "Qwen3-8B"
 ) -> None:
@@ -224,7 +224,7 @@ def test_streaming_chat(
 
 
 def interactive_chat(
-    base_url: str = "http://localhost:8000/v1",
+    base_url: str = "http://192.168.1.2:8000/v1",
     api_key: str = "sk-xxx",
     model: str = "Qwen3-8B"
 ) -> None:
@@ -290,7 +290,7 @@ def main():
     print("🧪 OpenAI Chat Completions API 测试")
     print("=" * 50)
     
-    base_url = "http://localhost:8000"
+    base_url = "http://192.168.1.2:8000"
     model = "Qwen3-8B"
     
     # 检查服务器健康状态
