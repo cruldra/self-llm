@@ -1,0 +1,10 @@
+[project]
+name = "qwen3-8b-vllm-example"
+version = "0.1.0"
+description = "Qwen3-8B vLLM 部署调用示例项目"
+requires-python = ">=3.12"
+
+dependencies = [
+    "vllm>=0.6.0",
+    "modelscope>=1.20.0"
+]
