@@ -1,0 +1,11 @@
+[project]
+name = "qwen3-8b-evalscope"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "evalscope>=0.17.1",
+    "modelscope>=1.29.0",
+    "vllm>=0.10.1",
+]
