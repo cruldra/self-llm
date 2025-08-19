@@ -1,0 +1,14 @@
+[project]
+name = "minicpm-o-2-6-audio"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "accelerate>=1.10.0",
+    "librosa>=0.11.0",
+    "modelscope>=1.29.0",
+    "soundfile>=0.13.1",
+    "timm>=1.0.19",
+    "transformers==4.44.2",
+]
